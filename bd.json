@@ -1,0 +1,25 @@
+{
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Antônio Marques",
+      "email": "toinho@gmail.com",
+      "pagina":"toin.com.br",
+      "dataCadastro": "12-12-12"
+    },
+    {
+      "id": 2,
+      "nome": "Helena Mello",
+      "email": "ela@gmail.com",
+      "pagina":"ela.com.br",
+      "dataCadastro": "13-11-13"
+    },
+    {
+      "id": 3,
+      "nome": "Chica da Silva",
+      "email": "chiquinha@gmail.com",
+      "pagina":"quinha.com.br",
+      "dataCadastro": "14-10-14"
+    }
+  ]
+}
