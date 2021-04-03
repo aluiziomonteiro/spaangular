@@ -1,25 +1,32 @@
 {
-  "usuario": [
+  "user": [
     {
       "id": 1,
-      "nome": "Antônio Marques",
-      "email": "toinho@gmail.com",
-      "pagina":"toin.com.br",
-      "dataCadastro": "12-12-12"
+      "name": "Assunção Mondragão",
+      "email": "dragaom@gmail.com",
+      "page":"http://dragaom.com.br",
+      "registrationDate": "November 2, 2020"
     },
     {
       "id": 2,
-      "nome": "Helena Mello",
-      "email": "ela@gmail.com",
-      "pagina":"ela.com.br",
-      "dataCadastro": "13-11-13"
+      "name": "Riyan Severiano",
+      "email": "riveriano@gmail.com",
+      "page":"http://riveriano.com.br",
+      "registrationDate": "October 1, 2020"
     },
     {
       "id": 3,
-      "nome": "Chica da Silva",
-      "email": "chiquinha@gmail.com",
-      "pagina":"quinha.com.br",
-      "dataCadastro": "14-10-14"
+      "name": "Wallace Jamandas",
+      "email": "jamandas@gmail.com",
+      "page":"http://jamandas.com.br",
+      "registrationDate": "January 12, 2020"
+    },
+    {
+      "id": 4,
+      "name": "Alcino Veiga",
+      "email": "alceuga@gmail.com",
+      "page":"http://alceuga.com.br",
+      "registrationDate": "2020-12-26"
     }
   ]
 }

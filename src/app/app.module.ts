@@ -7,19 +7,17 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 
-import { HomeComponent } from './home/home.component';
-import { TopoComponent } from './shared/components/topo/topo.component';
-import { ListarComponent } from './usuarios/listar/listar.component';
-import { CadastrarComponent } from './usuarios/cadastrar/cadastrar.component';
+
 import { FormsModule } from '@angular/forms';
+import { TableComponent } from './shared/components/table/table.component';
+import { TopComponent } from './shared/components/top/top.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    TopoComponent,
-    ListarComponent,
-    CadastrarComponent
+    TopComponent,
+    TopComponent,
+    TableComponent
     
   ],
   imports: [
