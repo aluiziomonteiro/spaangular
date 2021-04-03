@@ -14,11 +14,20 @@ import { User} from '../../models/user';
 export class TableComponent{
 
   users: User[] = [];
+  noPhoto = "./../assets/img/no-photo.png";
 
   constructor(private service: UserService){}
 
   ngOnInit() {
     this.service.listar().subscribe(data => this.users = data);
+  }
+
+  edit(user: User){
+    alert(JSON.stringify(user, null, 4));
+  }
+
+  remove(user: User){
+    alert("Um dia vai remover o usuário: "+user.name+"!");
   }
 
   displayedColumns: string[] = ['select', 'photo', 'data', 'edit', 'remove'];
