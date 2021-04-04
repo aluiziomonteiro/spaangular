@@ -3,11 +3,11 @@ import { UserService } from 'src/app/core/user.service';
 import { User } from 'src/app/shared/models/user';
 
 @Component({
-  selector: 'spa-listar',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'spa-list',
+  templateUrl: './list-users.component.html',
+  styleUrls: ['./list-users.component.css']
 })
-export class ListarComponent implements OnInit {
+export class ListUsersComponent implements OnInit {
 
   constructor(private servico: UserService) { }
 

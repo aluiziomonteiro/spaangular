@@ -8,16 +8,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableComponent } from './shared/components/table/table.component';
 import { TopComponent } from './shared/components/top/top.component';
+import { CreateUsersComponent } from './users/create-users/create-users.component';
+import { ListUsersComponent } from './users/list-users/list-users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
-    TopComponent,
-    TableComponent
+    ListUsersComponent,
+    TableComponent,
+    CreateUsersComponent
     
   ],
   imports: [
@@ -26,6 +29,7 @@ import { TopComponent } from './shared/components/top/top.component';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   providers: [],
