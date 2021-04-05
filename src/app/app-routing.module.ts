@@ -6,7 +6,7 @@ import { CreateUsersComponent } from './users/create-users/create-users.componen
 const routes: Routes = [
   {
     path: '',
-    component: TableComponent
+    component: CreateUsersComponent
   },
   {
     path: 'cadastro',

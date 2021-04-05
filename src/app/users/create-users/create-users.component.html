@@ -1,24 +1,28 @@
-<div> 
-   <mat-card>
-       <mat-card-content>
+<div class="container">  
+   <mat-card >
+       <form [formGroup]="formRegister" (ngSubmit)="submit()">
+       <mat-card-content class="center">
+        <div class="div-date">
+            <mat-label>Data: {{date | date: 'dd/MM/yyyy'}}</mat-label>
+        </div>
             <mat-form-field>
-                <input matInput placeholder="Nome">
+                <input matInput placeholder="Nome" name="name" formControlName="name">  
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Link Foto">
+                <input matInput placeholder="Link Foto" name="imageUrl" formControlName="imageUrl">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="Email">
+                <input matInput placeholder="Email" name="email" formControlName="email">
             </mat-form-field>
             <mat-form-field>
-                 <input matInput placeholder="Página">
-            </mat-form-field>
-            <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="Data" [formControl]="date">
-                <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
-                <mat-datepicker #picker></mat-datepicker>
+                 <input matInput placeholder="Página" name="page" formControlName="page">
             </mat-form-field>
        </mat-card-content>
-   </mat-card>
 
+       <mat-card-actions>
+           <button type="submit" color="primary" mat-raised-button>Registrar</button>
+           <button type="reset" color="warn" mat-raised-button>Limpar</button>
+       </mat-card-actions>
+    </form>
+   </mat-card>
 </div>
