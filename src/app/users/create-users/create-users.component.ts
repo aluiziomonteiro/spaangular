@@ -14,7 +14,7 @@ export class CreateUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
-       name: ['',[Validators.required, , Validators.minLength(2), Validators.maxLength(256)]],
+       name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
        imageUrl: ['',[Validators.minLength(2), Validators.maxLength(256)]],
        email: ['',[Validators.required, Validators.maxLength(256)]],
        page: ['',[Validators.maxLength(256)]],
@@ -22,7 +22,17 @@ export class CreateUsersComponent implements OnInit {
     });
   }
 
-  submit(){
-    alert(JSON.stringify(this.formRegister.value, null, 4));
+  get f (){
+    return this.formRegister.controls;
   }
+
+  submit(): void{
+    this.formRegister.markAllAsTouched();
+    if(this.formRegister.invalid) {
+      return;
+    } else {
+      alert(JSON.stringify(this.formRegister.value, null, 4));
+    }
+  }
+
 }
