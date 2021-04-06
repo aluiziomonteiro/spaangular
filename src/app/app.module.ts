@@ -13,6 +13,7 @@ import { TableComponent } from './shared/components/table/table.component';
 import { TopComponent } from './shared/components/top/top.component';
 import { CreateUsersComponent } from './users/create-users/create-users.component';
 import { ListUsersComponent } from './users/list-users/list-users.component';
+import { FieldsModule } from './shared/components/fields/fields.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ListUsersComponent } from './users/list-users/list-users.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    FieldsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

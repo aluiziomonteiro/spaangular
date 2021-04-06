@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
 
 @Component({
   selector: 'spa-register',
@@ -10,15 +11,17 @@ export class CreateUsersComponent implements OnInit {
 
   formRegister: FormGroup;
   date = new Date();
-  constructor(private formBuilder: FormBuilder) { }
+  
+  constructor(public validate: ValidateFieldsService, 
+              private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
        name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
-       imageUrl: ['',[Validators.minLength(2), Validators.maxLength(256)]],
-       email: ['',[Validators.required, Validators.maxLength(256)]],
-       page: ['',[Validators.maxLength(256)]],
-       registrationDate: [this.date, [Validators.required]],
+       imageUrl: ['',[Validators.minLength(10)]],
+       email: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
+       page: ['',[Validators.minLength(8)]],
+       registrationDate: [this.date],
     });
   }
 
