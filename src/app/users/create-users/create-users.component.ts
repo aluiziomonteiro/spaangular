@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { UserService } from 'src/app/core/user.service';
 import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
-import { User } from 'src/app/shared/models/user';
+
 
 @Component({
   selector: 'spa-register',
@@ -11,8 +12,8 @@ import { User } from 'src/app/shared/models/user';
 })
 export class CreateUsersComponent implements OnInit {
 
-  formRegister: FormGroup;
-  date = new Date();
+  public formRegister: FormGroup;
+  public date = new Date();
   
   constructor(public validate: ValidateFieldsService, 
               private formBuilder: FormBuilder,
@@ -28,27 +29,30 @@ export class CreateUsersComponent implements OnInit {
     });
   }
 
-  get f (){
+  public get f (){
     return this.formRegister.controls;
   }
 
-  submit(): void{
+  public submit(): void{
     this.formRegister.markAllAsTouched();
     if(this.formRegister.invalid) {
       return;
-    } else {
-      this.service.create(this.formRegister.value).subscribe(() => 
-      {
-        alert("Adicionado com sucesso!");
-      }, 
-      () => {
-        alert("Algo de errado ao adicionar usuário!");
-      });
-      //alert(JSON.stringify(this.formRegister.value, null, 4));
+    } else { 
+      this.createUser();
     }
   }
 
-  reset() {
+  private createUser() {
+    this.service.create(this.formRegister.value).subscribe(() => {
+      alert("Adicionado com sucesso!");
+      this.reset();
+    },
+      () => {
+        alert("Algo de errado ao adicionar usuário!");
+      });
+  }
+
+  public reset() {
     this.formRegister.reset();
   }
 

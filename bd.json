@@ -41,28 +41,12 @@
       "registrationDate": "2020-12-26"
     },
     {
-      "name": "Aluizio",
-      "imageUrl": "urlaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "page": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "registrationDate": "2021-04-13T03:51:39.805Z",
-      "id": 6
-    },
-    {
-      "name": "Aluizio",
-      "imageUrl": "urlaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "page": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "registrationDate": "2021-04-13T03:51:39.805Z",
+      "name": "ddddddddd",
+      "imageUrl": "ddddddddddddddddddd",
+      "email": "ddddddddddddddddd",
+      "page": "dddddddddddddddddddd",
+      "registrationDate": null,
       "id": 7
-    },
-    {
-      "name": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
-      "imageUrl": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
-      "email": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
-      "page": "ggggggggggggggggggggggggggggggggggggggggg",
-      "registrationDate": "2021-04-13T04:09:07.137Z",
-      "id": 8
     }
   ]
 }

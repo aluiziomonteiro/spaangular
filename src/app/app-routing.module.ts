@@ -6,7 +6,7 @@ import { ListUsersComponent } from './users/list-users/list-users.component';
 const routes: Routes = [
   {
     path: '',
-    component: CreateUsersComponent
+    component: ListUsersComponent
   },
   {
     path: 'cadastro',

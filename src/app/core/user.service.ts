@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../shared/models/user';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +16,10 @@ export class UserService {
   }
 
   create(user: User): Observable<User>{
-    return this.http.post<User> (this.url, user);
+    return this.http.post<User>(this.url, user);
+  }
+
+  remove(id: number): Observable<void> {
+    return this.http.delete<void>(this.url + id);
   }
 }
