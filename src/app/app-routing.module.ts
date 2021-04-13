@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TableComponent } from './shared/components/table/table.component';
 import { CreateUsersComponent } from './users/create-users/create-users.component';
+import { ListUsersComponent } from './users/list-users/list-users.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CreateUsersComponent
+    component: ListUsersComponent
   },
   {
     path: 'cadastro',
     component: CreateUsersComponent
+  },
+  {
+    path: 'lista',
+    component: ListUsersComponent
   }
 ];
 
