@@ -4,11 +4,12 @@ import { MaterialModule } from '../material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateUsersComponent } from './create-users/create-users.component';
 import { ListUsersComponent } from './list-users/list-users.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     CreateUsersComponent, 
-    ListUsersComponent
+    ListUsersComponent, HomeComponent
   ],
   imports: [
     CommonModule,  
