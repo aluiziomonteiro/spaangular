@@ -19,7 +19,7 @@ export class TableComponent{
   constructor(private service: UserService){}
 
   ngOnInit() {
-    this.service.listar().subscribe(data => this.users = data);
+    this.service.list().subscribe(data => this.users = data);
   }
 
   edit(user: User){

@@ -1,6 +1,6 @@
 <div class="container">  
    <mat-card >
-       <form [formGroup]="formRegister" (ngSubmit)="submit()">
+       <form [formGroup]="formRegister">
        <mat-card-content class="center">
             <div class="div-date">
                 <mat-label>Data: {{date | date: 'dd/MM/yyyy'}}</mat-label>
@@ -21,10 +21,10 @@
                 (genericEvent)="submit()" >
             </spa-btn>
             <spa-btn
-                genericColor="warn"
+                genericColor=""
                 genericType="reset"
                 genericLabel="Limpar"
-                (genericEvent)="submit()" >
+                (genericEvent)="reset()" >
             </spa-btn>
 
         </mat-card-actions>

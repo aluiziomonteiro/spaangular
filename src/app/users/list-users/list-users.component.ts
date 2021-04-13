@@ -9,11 +9,11 @@ import { User } from 'src/app/shared/models/user';
 })
 export class ListUsersComponent implements OnInit {
 
-  constructor(private servico: UserService) { }
+  constructor(private service: UserService) { }
 
   users: User[] = [];
 
   ngOnInit(): void {
-    this.servico.listar().subscribe(object => this.users = object);
+    this.service.list().subscribe(object => this.users = object);
   }
 }

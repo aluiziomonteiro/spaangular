@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/core/user.service';
 import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'spa-register',
@@ -13,7 +15,8 @@ export class CreateUsersComponent implements OnInit {
   date = new Date();
   
   constructor(public validate: ValidateFieldsService, 
-              private formBuilder: FormBuilder) { }
+              private formBuilder: FormBuilder,
+              private service: UserService) { }
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
@@ -34,7 +37,14 @@ export class CreateUsersComponent implements OnInit {
     if(this.formRegister.invalid) {
       return;
     } else {
-      alert(JSON.stringify(this.formRegister.value, null, 4));
+      this.service.create(this.formRegister.value).subscribe(() => 
+      {
+        alert("Adicionado com sucesso!");
+      }, 
+      () => {
+        alert("Algo de errado ao adicionar usuário!");
+      });
+      //alert(JSON.stringify(this.formRegister.value, null, 4));
     }
   }
 
