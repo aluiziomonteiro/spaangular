@@ -14,6 +14,7 @@ import { TopComponent } from './shared/components/top/top.component';
 import { CreateUsersComponent } from './users/create-users/create-users.component';
 import { ListUsersComponent } from './users/list-users/list-users.component';
 import { FieldsModule } from './shared/components/fields/fields.module';
+import { ButtonComponent } from './shared/components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FieldsModule } from './shared/components/fields/fields.module';
     TopComponent,
     ListUsersComponent,
     TableComponent,
-    CreateUsersComponent
+    CreateUsersComponent,
+    ButtonComponent
     
   ],
   imports: [

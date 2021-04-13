@@ -38,4 +38,8 @@ export class CreateUsersComponent implements OnInit {
     }
   }
 
+  reset() {
+    this.formRegister.reset();
+  }
+
 }

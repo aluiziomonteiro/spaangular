@@ -2,21 +2,32 @@
    <mat-card >
        <form [formGroup]="formRegister" (ngSubmit)="submit()">
        <mat-card-content class="center">
-        <div class="div-date">
-            <mat-label>Data: {{date | date: 'dd/MM/yyyy'}}</mat-label>
-        </div>
+            <div class="div-date">
+                <mat-label>Data: {{date | date: 'dd/MM/yyyy'}}</mat-label>
+            </div>
         
             <spa-input-text title="Nome *" [formGroup]="formRegister" controlName="name"></spa-input-text>
             <spa-input-text title="URL da Imagem" [formGroup]="formRegister" controlName="imageUrl"></spa-input-text>
             <spa-input-text title="E-mail *" [formGroup]="formRegister" controlName="email"></spa-input-text>
-            <spa-input-text title="Página Web" [formGroup]="formRegister" controlName="page"></spa-input-text>
-   
+            <spa-input-text title="Página Web" [formGroup]="formRegister" controlName="page"></spa-input-text>    
+
        </mat-card-content>
 
        <mat-card-actions>
-           <button type="submit" color="primary" mat-raised-button>Registrar</button>
-           <button type="reset" color="warn" mat-raised-button>Limpar</button>
-       </mat-card-actions>
+            <spa-btn
+                genericColor="primary"
+                genericType="submit"
+                genericLabel="Registrar"
+                (genericEvent)="submit()" >
+            </spa-btn>
+            <spa-btn
+                genericColor="warn"
+                genericType="reset"
+                genericLabel="Limpar"
+                (genericEvent)="submit()" >
+            </spa-btn>
+
+        </mat-card-actions>
     </form>
    </mat-card>
 </div>
