@@ -5,11 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateUsersComponent } from './create-users/create-users.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { HomeComponent } from './home/home.component';
+import { EditUsersComponent } from './edit-users/edit-users.component';
 
 @NgModule({
   declarations: [
     CreateUsersComponent, 
-    ListUsersComponent, HomeComponent
+    ListUsersComponent, 
+    HomeComponent, 
+    EditUsersComponent
   ],
   imports: [
     CommonModule,  
@@ -19,7 +22,9 @@ import { HomeComponent } from './home/home.component';
   ],
   exports: [
     CreateUsersComponent, 
-    ListUsersComponent
+    ListUsersComponent,
+    EditUsersComponent,
+    HomeComponent
   ]
 })
 

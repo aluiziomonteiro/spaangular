@@ -1,0 +1,30 @@
+<div class="container">  
+    <mat-card >
+        <form [formGroup]="formRegister">
+            
+        <mat-card-content class="center">
+             <spa-input-text title="Nome *" [formGroup]="formRegister" controlName="name"></spa-input-text>
+             <spa-input-text title="URL da Imagem" [formGroup]="formRegister" controlName="imageUrl"></spa-input-text>
+             <spa-input-text title="E-mail *" [formGroup]="formRegister" controlName="email"></spa-input-text>
+             <spa-input-text title="Página Web" [formGroup]="formRegister" controlName="page"></spa-input-text>    
+             <spa-input-text title="Data de Registro" [formGroup]="formRegister" controlName="addDate"></spa-input-text>
+        </mat-card-content>
+ 
+        <mat-card-actions>
+             <spa-btn
+                 genericColor="primary"
+                 genericType="submit"
+                 genericLabel="Atualizar"
+                 (genericEvent)="submit()" >
+             </spa-btn>
+             <spa-btn
+                 genericColor=""
+                 genericType="reset"
+                 genericLabel="Cancelar"
+                 (genericEvent)="cancel()" >
+             </spa-btn>
+ 
+         </mat-card-actions>
+     </form>
+    </mat-card>
+ </div>

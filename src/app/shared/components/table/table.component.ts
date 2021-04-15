@@ -23,8 +23,8 @@ export class TableComponent{
     this.service.list().subscribe(data => this.users = data);
   }
 
-  edit(user: User){
-    alert(JSON.stringify(user, null, 4));
+  edit(id: number){
+    this.router.navigateByUrl('editar/' + id);
   }
 
   remove(id: number): void{
@@ -35,19 +35,19 @@ export class TableComponent{
   dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
 
-  isAllSelected() {
+  private isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
 
-  masterToggle() {
+  public masterToggle() {
     this.isAllSelected() ?
       this.selection.clear() :
       this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
-  checkboxLabel(row?: User): string {
+  public checkboxLabel(row?: User): string {
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }

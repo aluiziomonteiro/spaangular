@@ -25,7 +25,7 @@ export class CreateUsersComponent implements OnInit {
        imageUrl: ['',[Validators.minLength(10)]],
        email: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
        page: ['',[Validators.minLength(8)]],
-       registrationDate: [this.date],
+       addDate: [this.date],
     });
   }
 

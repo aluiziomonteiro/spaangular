@@ -39,7 +39,7 @@
             <a [href]="user.page">{{user.page}}</a>
           </p>
 
-          <p class="date"> Entrou em: {{user.registrationDate  | date: 'dd/MM/yyyy'}}</p>
+          <p class="date"> Entrou em: {{user.addDate  | date: 'dd/MM/yyyy'}}</p>
         </td>
     </ng-container>
   
@@ -52,7 +52,7 @@
           genericColor="primary"
           genericType="button"
           genericLabel="Editar"
-          (genericEvent)="edit(user)" >
+          (genericEvent)="edit(user.id)" >
         </spa-btn>
       </div>
       </td>

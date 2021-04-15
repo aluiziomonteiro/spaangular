@@ -11,6 +11,10 @@ export class UserService {
   private readonly url = 'http://localhost:3000/user/';
   constructor(private http: HttpClient) { }
 
+  listById(id:number): Observable<User> {
+    return this.http.get<User>(this.url + id);
+  }
+
   list() {
     return this.http.get<User[]>(this.url);
   }

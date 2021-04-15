@@ -3,6 +3,6 @@ export interface User {
     imageUrl: string;
     name: string;
     email: string;
-    homePage:string;
-    registrationDate: Date;
+    page:string;
+    addDate: Date;
 }
