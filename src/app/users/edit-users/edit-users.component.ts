@@ -14,7 +14,7 @@ let user: User;
 })
 
 export class EditUsersComponent implements OnInit {
-  public formRegister: FormGroup;
+  public formEdit: FormGroup;
   
   public id: number;
 
@@ -27,7 +27,7 @@ export class EditUsersComponent implements OnInit {
     this.id = this.activatedRoute.snapshot.params['id'];
     this.service.listById(this.id).subscribe(obj => user = obj);
 
-    this.formRegister = this.formBuilder.group({
+    this.formEdit = this.formBuilder.group({
        name: [user.name,[Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
        imageUrl: [user.imageUrl,[Validators.minLength(10)]],
        email: [user.email,[Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
@@ -37,12 +37,12 @@ export class EditUsersComponent implements OnInit {
   }
 
   public get f (){
-    return this.formRegister.controls;
+    return this.formEdit.controls;
   }
 
   public submit(): void{
-    this.formRegister.markAllAsTouched();
-    if(this.formRegister.invalid) {
+    this.formEdit.markAllAsTouched();
+    if(this.formEdit.invalid) {
       return;
     } else { 
       this.updateUser();
@@ -50,7 +50,7 @@ export class EditUsersComponent implements OnInit {
   }
 
   private updateUser() {
-    this.service.create(this.formRegister.value).subscribe(() => {
+    this.service.updateUser(this.formEdit.value, user.id).subscribe(() => {
       alert("Atualizado com Sucesso");
     },
       () => {
@@ -59,6 +59,6 @@ export class EditUsersComponent implements OnInit {
   }
 
   public cancel() {
-    this.formRegister.reset();
+    this.formEdit.reset();
   }
 }
