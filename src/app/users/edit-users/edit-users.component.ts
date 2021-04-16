@@ -1,4 +1,3 @@
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -55,7 +54,7 @@ export class EditUsersComponent implements OnInit {
   private updateUser() {
     this.service.updateUser(this.formEdit.value, this.id).subscribe(() => {
       alert("Atualizado com Sucesso");
-      this.cancel();
+      this.router.navigateByUrl('lista');
     },
     () => {
       alert("Erro ao atualizar registro");

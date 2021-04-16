@@ -9,6 +9,9 @@ export class TopComponent implements OnInit {
 
   constructor() { }
 
+  public isMenuOpen: boolean = false;
+  
   ngOnInit(): void {
   }
+
 }

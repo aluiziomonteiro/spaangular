@@ -1,1 +1,35 @@
-<p>top</p>
+<div class="container" > 
+    <header>
+      <mat-toolbar color="primary" (click)="sidenav.toggle()">
+          <button mat-icon-button>
+            <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+          </button>
+          <span class="title">Controle de Usuários - SPA</span>
+        </mat-toolbar>
+    </header>
+  
+  <mat-sidenav-container>
+      <mat-sidenav #sidenav autoFocus="false" 
+                    mode="push" 
+                    [(opened)]="isMenuOpen" 
+                    class="sidenav"
+      >
+        <a mat-button routerLink="home">
+            <mat-icon>home</mat-icon> Início</a>
+        <a mat-button routerLink="cadastro">
+            <mat-icon>app_registration</mat-icon> Cadastrar</a>
+        <a mat-button routerLink="lista">
+            <mat-icon>list_alt</mat-icon> Listar</a>
+      </mat-sidenav>
+  
+      <mat-sidenav-content>
+
+        <div class="conteudo">
+          <router-outlet></router-outlet>
+        </div>
+        
+      </mat-sidenav-content>
+  
+    </mat-sidenav-container>
+  
+  </div>

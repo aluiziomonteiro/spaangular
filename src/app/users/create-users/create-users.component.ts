@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { UserService } from 'src/app/core/user.service';
 import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
@@ -17,7 +18,8 @@ export class CreateUsersComponent implements OnInit {
   
   constructor(public validate: ValidateFieldsService, 
               private formBuilder: FormBuilder,
-              private service: UserService) { }
+              private service: UserService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
@@ -45,7 +47,7 @@ export class CreateUsersComponent implements OnInit {
   private createUser() {
     this.service.create(this.formRegister.value).subscribe(() => {
       alert("Adicionado com sucesso!");
-      this.reset();
+      this.router.navigateByUrl("lista");
     },
       () => {
         alert("Algo de errado ao adicionar usuário!");
