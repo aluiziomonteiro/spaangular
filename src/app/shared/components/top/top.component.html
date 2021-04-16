@@ -9,10 +9,12 @@
     </header>
   
   <mat-sidenav-container>
-      <mat-sidenav #sidenav autoFocus="false" 
+      <mat-sidenav #sidenav autoFocus="false"
+                    fixedInViewport="true" 
                     mode="push" 
                     [(opened)]="isMenuOpen" 
                     class="sidenav"
+                    (click)="closeSideNav()"
       >
         <a mat-button routerLink="home">
             <mat-icon>home</mat-icon> Início</a>
