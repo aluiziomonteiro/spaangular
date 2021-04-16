@@ -6,7 +6,6 @@ import { UserService } from 'src/app/core/user.service';
 import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
 import { User } from 'src/app/shared/models/user';
 
-
 @Component({
   templateUrl: './edit-users.component.html',
   styleUrls: ['./edit-users.component.css']

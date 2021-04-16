@@ -13,5 +13,4 @@ export class TopComponent implements OnInit {
   
   ngOnInit(): void {
   }
-
 }

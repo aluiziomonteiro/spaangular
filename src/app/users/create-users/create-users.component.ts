@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
 import { UserService } from 'src/app/core/user.service';
 import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
 
-
 @Component({
   selector: 'spa-register',
   templateUrl: './create-users.component.html',

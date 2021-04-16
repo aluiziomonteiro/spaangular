@@ -18,7 +18,4 @@ export class InputTextComponent {
   get formControl(): AbstractControl {
     return this.formGroup.controls[this.controlName];
   }
-
- 
-
 }

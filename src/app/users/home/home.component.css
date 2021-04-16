@@ -1,5 +1,5 @@
 .divHome {
-    height: 100%;
+    height: 95%;
     background-image: url(../../../assets/img/fundo.jpeg);
     display: flex;
     flex-direction: column;

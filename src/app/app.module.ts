@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
-
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 
 import { TableComponent } from './shared/components/table/table.component';
 import { TopComponent } from './shared/components/top/top.component';
@@ -17,6 +16,7 @@ import { ListUsersComponent } from './users/list-users/list-users.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { EditUsersComponent } from './users/edit-users/edit-users.component';
 import { InputTextComponent } from './shared/components/fields/input-text/input-text.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { InputTextComponent } from './shared/components/fields/input-text/input-
     CreateUsersComponent,
     ButtonComponent,
     EditUsersComponent,
-    InputTextComponent
+    InputTextComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,  
