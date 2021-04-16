@@ -1,0 +1,21 @@
+<div [formGroup]="formGroup">
+    <mat-form-field class="width100">
+
+        <input  matInput            
+              [matDatepicker]="picker" 
+              [placeholder]="title" 
+              [name]="controlName" 
+              [formControlName]="controlName"
+              [disabled]="noEdit" 
+              readonly
+              (click)="picker.open()"
+        >                        
+        <mat-error *ngIf="validate.hasErrorValidate(formControl, 'required')">
+            Preenchimento obrigatório!
+        </mat-error>
+
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+
+    </mat-form-field>
+</div>

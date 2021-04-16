@@ -17,6 +17,7 @@ import { ButtonComponent } from './shared/components/button/button.component';
 import { EditUsersComponent } from './users/edit-users/edit-users.component';
 import { InputTextComponent } from './shared/components/fields/input-text/input-text.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { InputDateComponent } from './shared/components/fields/input-date/input-date.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     ButtonComponent,
     EditUsersComponent,
     InputTextComponent,
-    FooterComponent
+    FooterComponent,
+    InputDateComponent,
+
   ],
   imports: [
     CommonModule,  

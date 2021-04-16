@@ -34,7 +34,7 @@ export class EditUsersComponent implements OnInit {
       imageUrl: [user.imageUrl, [Validators.minLength(10)]],
       email: [user.email, [Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
       page: [user.page, [Validators.minLength(8)]],
-      addDate: [user.addDate]});
+      addDate: [user.addDate],});
   }
 
   public get f (){

@@ -3,27 +3,26 @@
         <form [formGroup]="formEdit">
 
         <mat-card-content class="center">
-             <spa-input-text title="Nome *" [formGroup]="formEdit" controlName="name"></spa-input-text>
-             <spa-input-text title="URL da Imagem" [formGroup]="formEdit" controlName="imageUrl"></spa-input-text>
-             <spa-input-text title="E-mail *" [formGroup]="formEdit" controlName="email"></spa-input-text>
-             <spa-input-text title="Página Web" [formGroup]="formEdit" controlName="page"></spa-input-text>    
-             <spa-input-text title="Data de Registro" [formGroup]="formEdit" controlName="addDate"></spa-input-text>
+            <spa-input-text title="Nome *" [formGroup]="formEdit" controlName="name"></spa-input-text>
+            <spa-input-text title="URL da Imagem" [formGroup]="formEdit" controlName="imageUrl"></spa-input-text>
+            <spa-input-text title="E-mail *" [formGroup]="formEdit" controlName="email"></spa-input-text>
+            <spa-input-text title="Página Web" [formGroup]="formEdit" controlName="page"></spa-input-text>    
+            <spa-input-date title="Data de Registro *" [formGroup]="formEdit" controlName="addDate" noEdit="true"></spa-input-date>
         </mat-card-content>
  
         <mat-card-actions>
-             <spa-btn
-                 genericColor="primary"
-                 genericType="submit"
-                 genericLabel="Atualizar"
-                 (genericEvent)="submit()" >
-             </spa-btn>
-             <spa-btn
-  
-                 genericLabel="Cancelar"
-                 (genericEvent)="cancel()" >
-             </spa-btn>
+            <spa-btn
+                genericColor="primary"
+                genericType="submit"
+                genericLabel="Atualizar"
+                (genericEvent)="submit()" >
+            </spa-btn>
+            <spa-btn
+                genericLabel="Cancelar"
+                (genericEvent)="cancel()" >
+            </spa-btn>
  
-         </mat-card-actions>
-     </form>
+        </mat-card-actions>
+    </form>
     </mat-card>
- </div>
+</div>
