@@ -15,7 +15,7 @@ import { User} from '../../models/user';
 export class TableComponent{
 
   users: User[] = [];
-  noPhoto = "./../assets/img/no-photo.png";
+  noPhoto = "https://imperialtecnologia.com.br/images/sem_foto.png";
 
   constructor(private service: UserService,
               private router: Router){}

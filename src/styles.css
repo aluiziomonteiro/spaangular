@@ -6,3 +6,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .width100{
     width: 100%;
 }
+
+.toolbarTitle {
+    color: rgb(93 95 103);
+    background-color: #dedede;
+}
+
