@@ -30,8 +30,8 @@ export class EditUsersComponent implements OnInit {
 
   private buildForm(user: User) {
     this.formEdit = this.formBuilder.group({
-      name: [user.name, [Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
-      imageUrl: [user.imageUrl, [Validators.minLength(10)]],
+      name: [user.name, [Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
+      imageUrl: [user.imageUrl, [Validators.minLength(8)]],
       email: [user.email, [Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
       page: [user.page, [Validators.minLength(8)]],
       addDate: [user.addDate],});

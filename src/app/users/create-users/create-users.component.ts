@@ -22,8 +22,8 @@ export class CreateUsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
-       name: ['',[Validators.required, Validators.minLength(2), Validators.maxLength(256)]],
-       imageUrl: ['',[Validators.minLength(10)]],
+       name: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
+       imageUrl: ['',[Validators.minLength(8)]],
        email: ['',[Validators.required, Validators.minLength(8), Validators.maxLength(256)]],
        page: ['',[Validators.minLength(8)]],
        addDate: [this.date],

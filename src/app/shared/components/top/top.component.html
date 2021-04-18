@@ -16,6 +16,7 @@
                     class="sidenav"
                     (click)="closeSideNav()"
       >
+      
         <a mat-button routerLink="home">
             <mat-icon>home</mat-icon> Início</a>
         <a mat-button routerLink="cadastro">
@@ -28,7 +29,6 @@
 
         <div class="body">
           <router-outlet> </router-outlet>
-          <spa-footer></spa-footer>
         </div>
         
       </mat-sidenav-content>
