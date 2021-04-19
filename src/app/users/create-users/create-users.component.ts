@@ -62,6 +62,7 @@ export class CreateUsersComponent implements OnInit {
       };
 
       const dialogRef = this.dialog.open(ModalComponent, config);
+      
       dialogRef.afterClosed().subscribe((option: boolean) => {
         if(option){
           this.router.navigateByUrl('lista');

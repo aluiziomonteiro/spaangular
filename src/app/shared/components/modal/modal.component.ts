@@ -20,14 +20,6 @@ modal = {
     bSuccessColor: "primary"
 } as Modal
 
-title?: string;
-description?: string;
-bSuccess?: string;
-bCancel?: string;
-bSuccessColor?: string;
-bCancelColor?: string;
-hasBtnCancel?: boolean;
-
   constructor(
     public dialogRef: MatDialogRef<ModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Modal) {}
