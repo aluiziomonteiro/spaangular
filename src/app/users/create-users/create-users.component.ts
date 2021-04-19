@@ -52,23 +52,39 @@ export class CreateUsersComponent implements OnInit {
 
       const config = {
         data: {
-          description: 'Cadastro realizado com sucesso!',
-          bSuccess: 'Okay',
-          bCancel: 'Fechar',
+          title: 'Sucesso!',
+          description: 'O Usuário foi registrado com sucesso!',
+          bSuccess: 'Lista de Usuários',
+          bCancel: 'Adicionar outro Usuário',
+          bCancelColor:'accent',
           hasBtnCancel: true,
         } as Modal
       };
 
       const dialogRef = this.dialog.open(ModalComponent, config);
-      this.router.navigateByUrl("lista");
+      dialogRef.afterClosed().subscribe((option: boolean) => {
+        if(option){
+          this.router.navigateByUrl('lista');
+        } else {
+          this.reset();
+        }
+      });
     },
       () => {
-        alert("Algo de errado ao adicionar usuário!");
+        const config = {
+          data: {
+            title: 'Erro ao salvar o registro',
+            description: 'Algo deu errado! Por favor, tente mais tarde!',
+            bSuccess: 'Ok',
+          } as Modal
+        };
+
+        const dialogRef = this.dialog.open(ModalComponent, config);
+
       });
   }
 
   public reset() {
     this.formRegister.reset();
   }
-
 }
