@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{modal.title}}</h1>
+<div mat-dialog-content>
+  <p>{{modal.description}}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button [color]="modal.bSuccessColor" 
+            [mat-dialog-close]="true" 
+            cdkFocusInitial> {{modal.bSuccess}}
+    </button>
+    <button mat-raised-button [color]="modal.bCancelColor" 
+            [mat-dialog-close]="false" 
+            *ngIf="modal.hasBtnCancel"> {{modal.bCancel}}
+    </button>
+</div>

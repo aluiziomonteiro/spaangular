@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material';
 import { Router } from '@angular/router';
 
 import { UserService } from 'src/app/core/user.service';
 import { ValidateFieldsService } from 'src/app/shared/components/fields/validate-fields.service';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
+import { Modal } from 'src/app/shared/models/modal';
 
 @Component({
   selector: 'spa-register',
@@ -15,10 +18,11 @@ export class CreateUsersComponent implements OnInit {
   public formRegister: FormGroup;
   public date = new Date();
   
-  constructor(public validate: ValidateFieldsService, 
-              private formBuilder: FormBuilder,
+  constructor(private formBuilder: FormBuilder,
               private service: UserService,
-              private router: Router) { }
+              private router: Router,
+              public validate: ValidateFieldsService,
+              public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.formRegister = this.formBuilder.group({
@@ -45,7 +49,17 @@ export class CreateUsersComponent implements OnInit {
 
   private createUser() {
     this.service.create(this.formRegister.value).subscribe(() => {
-      alert("Adicionado com sucesso!");
+
+      const config = {
+        data: {
+          description: 'Cadastro realizado com sucesso!',
+          bSuccess: 'Okay',
+          bCancel: 'Fechar',
+          hasBtnCancel: true,
+        } as Modal
+      };
+
+      const dialogRef = this.dialog.open(ModalComponent, config);
       this.router.navigateByUrl("lista");
     },
       () => {
