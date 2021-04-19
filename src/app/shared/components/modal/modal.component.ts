@@ -11,9 +11,9 @@ import { Modal } from '../../models/modal';
 export class ModalComponent implements OnInit {
 
 modal = {
-    title: 'Informação',
+    title: 'Info:',
     description: 'Operação concluída com exito!',
-    bSuccess: 'Okay',
+    bSuccess: 'Confirmar',
     bCancel: 'Cancelar',
     hasBtnCancel: false,
     bCancelColor: "",

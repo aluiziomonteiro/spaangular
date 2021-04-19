@@ -18,7 +18,7 @@ import { ModalComponent } from '../modal/modal.component';
 export class TableComponent{
 
   users: User[] = [];
-  name: String;
+  user: User;
 
   noPhoto = "https://imperialtecnologia.com.br/images/sem_foto.png";
 
@@ -30,40 +30,32 @@ export class TableComponent{
     this.service.list().subscribe(data => this.users = data);
   }
 
-  edit(id: number){
-    this.router.navigateByUrl('editar/' + id);
+  edit(user: User){
+    this.router.navigateByUrl('editar/' + user.id);
   }
 
-
-
-  remove(id: number): void{
-
+  remove(user: User): void{
     const config = {
       data: {
         title: 'Atenção!',
-        description: 'Deseja realmente excluir?',
-        bSuccess: 'Excluir registro',
-        bCancel: 'Cancelar operação',
-        bCancelColor:'accent',
+        description: 'Tem certeza que deseja remover \"'+ user.name + '\"?',
+        bSuccess: 'Remover registro',
+        bSuccessColor:"warn",
         hasBtnCancel: true,
       } as Modal
     };
 
     const dialogRef = this.dialog.open(ModalComponent, config);
-//
+
     dialogRef.afterClosed().subscribe((option: boolean) => {
       if(!option){
-        alert('Operação cancelada!');
-      } else {
-        alert('Usuário excluído com sucesso!');
-        this.service.remove(id).subscribe(() => this.router.navigateByUrl('lista')); 
-      }
-      this.router.navigateByUrl('lista');
+        this.service.remove(user.id).subscribe(); 
+        const dialogRef = this.dialog.open(ModalComponent);
+        dialogRef.afterClosed().subscribe(() => window.location.reload());
+      } 
     });
   }
-//
 
-  
   displayedColumns: string[] = ['select', 'photo', 'data', 'edit', 'remove'];
   dataSource = new MatTableDataSource<User>(this.users);
   selection = new SelectionModel<User>(true, []);
