@@ -1,20 +1,8 @@
-.container {
-    display: flex;
-    height: 84%;
-    justify-content: center;
-    align-items: center;
-    background: rgb(248, 248, 248);
-}
-
-.center {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
 .div-date {
     color: rgb(167, 167, 167);
     font-style: italic;
     display: flex;
     justify-content: flex-end;
 }
+
+

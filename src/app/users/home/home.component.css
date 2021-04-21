@@ -1,15 +1,15 @@
+
 .divHome {
-    height: 95%;
-    background-image: url(../../../assets/img/fundo.jpeg);
+    margin-top: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     font-style: italic;
 }
 
-h1 {
+.titleIndex {
     color: rgb(7, 22, 88);
+    font-size: 40px;
 }
 
 p {

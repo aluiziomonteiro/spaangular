@@ -1,15 +1,7 @@
-.container {
-    display: flex;
-    flex-direction: column;
-}
 
 .title {
     text-transform: uppercase;
     padding-left: 26px;
-}
-
-.sidenav {
-    width: 240px;
 }
 
 a {
@@ -17,7 +9,10 @@ a {
     text-align: left;
 }
 
-.body {
-    padding: -1px 0px;
-    height: 72ch;
+.main {
+    background-color: #0000cd0f;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

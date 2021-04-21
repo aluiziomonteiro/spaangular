@@ -48,7 +48,7 @@ export class TableComponent{
     const dialogRef = this.dialog.open(ModalComponent, config);
 
     dialogRef.afterClosed().subscribe((option: boolean) => {
-      if(!option){
+      if(option){
         this.service.remove(user.id).subscribe(); 
         const dialogRef = this.dialog.open(ModalComponent);
         dialogRef.afterClosed().subscribe(() => window.location.reload());

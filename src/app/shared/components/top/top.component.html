@@ -1,4 +1,4 @@
-<div class="container" > 
+    
     <header>
       <mat-toolbar color="primary" (click)="sidenav.toggle()">
           <button mat-icon-button>
@@ -12,11 +12,9 @@
       <mat-sidenav #sidenav autoFocus="false"
                     fixedInViewport="true" 
                     mode="push" 
-                    [(opened)]="isMenuOpen" 
-                    class="sidenav"
+                    [(opened)]="isMenuOpen"
                     (click)="closeSideNav()"
       >
-      
         <a mat-button routerLink="home">
             <mat-icon>home</mat-icon> Início</a>
         <a mat-button routerLink="cadastro">
@@ -25,14 +23,11 @@
             <mat-icon>list_alt</mat-icon> Listar</a>
       </mat-sidenav>
   
-      <mat-sidenav-content>
-
-        <div class="body">
-          <router-outlet> </router-outlet>
-        </div>
+      <mat-sidenav-content class="main">
+        <router-outlet> </router-outlet>
+        <spa-footer></spa-footer>
         
       </mat-sidenav-content>
   
     </mat-sidenav-container>
   
-  </div>

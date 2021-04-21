@@ -1,14 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;  font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #0000cd0f;}
 
 .width100{
     width: 100%;
 }
 
 .toolbarTitle {
-    color: rgb(93 95 103);
-    background-color: #dedede;
+    margin-top: 25%;
+    color: #ffffff;
+    background-color: #484e67;
 }
 
+.form-center {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 457px){
+    .toolbarTitle{
+        margin-top: 0%;
+    }
+    .form-center{
+        max-width: 350px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 395px){
+    .form-center{
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 291px){
+    .form-center{
+        max-width: 170px;
+    }
+
+    .title {
+        display: none;
+    }
+
+    footer{
+        display:none;
+    }
+}

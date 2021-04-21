@@ -54,3 +54,7 @@ th {
     padding-left: 82px;
 }
 
+.noReg {
+   padding: 15px;
+   color: red;
+}

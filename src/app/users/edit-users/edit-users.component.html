@@ -1,9 +1,9 @@
 <mat-toolbar class="toolbarTitle">Editar Usuário</mat-toolbar>
-<div class="container">  
+<div class="main">  
     <mat-card >
-        <form [formGroup]="formEdit">
+        <div [formGroup]="formEdit">
 
-        <mat-card-content class="center">
+        <mat-card-content class="form-center">
             <spa-input-text title="Nome *" [formGroup]="formEdit" controlName="name"></spa-input-text>
             <spa-input-text title="URL da Imagem" [formGroup]="formEdit" controlName="imageUrl"></spa-input-text>
             <spa-input-text title="E-mail *" [formGroup]="formEdit" controlName="email"></spa-input-text>
@@ -24,6 +24,6 @@
             </spa-btn>
  
         </mat-card-actions>
-    </form>
+    </div>
     </mat-card>
 </div>

@@ -1,19 +1,3 @@
-.container {
-    
-    margin-top: 30px;
-    height: 75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(248, 248, 248);
-}
-
-.center {
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
 .div-date {
     color: rgb(167, 167, 167);
     font-style: italic;
