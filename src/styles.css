@@ -19,6 +19,17 @@ body { margin: 0;  font-family: Roboto, "Helvetica Neue", sans-serif; background
     flex-direction: column;
 }
 
+@media (max-width: 990px){
+
+    .divBtn{
+        display:table-cell;
+    }
+    thead, tbody{
+        display:block;
+    }
+}
+
+
 @media (max-width: 457px){
     .toolbarTitle{
         margin-top: 0%;
@@ -29,6 +40,12 @@ body { margin: 0;  font-family: Roboto, "Helvetica Neue", sans-serif; background
 
     .title {
         font-size: 12px;
+    }
+    td{
+        display:block;
+    }
+    th{
+       display: contents;
     }
 }
 
